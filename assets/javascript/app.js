@@ -10,63 +10,64 @@ var questions = [{
 
         question: "What is the Capital of Italy?", 
 		choice: ["Sana'a", "Rome", "Cairo", "Madrid"],
-		answer: 1,
-		photo: "assets/images/rome.jpg"
+		answer: "Rome",
+		photo: "assets/images/rome.jpg",
 	 },
 	 {
 	 	question: "What is the Capital of Greece?", 
 		choice: ["Athens", "Seoul", "Lisbon", "Rome"],
-		answer: 0,
+		answer: "Athens",
 		photo: "assets/images/athens.jpg"
 	 }, 
 	 {
 	 	question: "What is the Capital of Iraq?", 
 		choice: ["Dubai", "Jeddah", "Baghdad", "Tahran" ],
-		answer: 2,
+		answer: "Baghdad",
 		photo: "assets/images/Baghdad.jpg"
 	}, 
 	{
 		question: "What is the Capital of Egypt?", 
 		choice: ["Hanoi", "Suva", "Cairo", "Madrid" ],
-		answer: 2,
+		answer: "Cairo",
 		photo: "assets/images/cairo.jpg"
 	}, 
 	{
 		question: "What is the Capital of United State?", 
 		choice: ["Stockholm", "Kingston", "Seoul", "DC" ],
-		answer: 3,
-		photo: "assets/images/london.jpg"
+		answer: "DC",
+		photo: "assets/images/DC.jpg"
 	}, 
 	{
 		question: "What is the Capital of Spain?", 
 		choice: ["Caracas", "Madrid", "Athens", "Dublin" ],
-		answer: 1,
+		answer: "Madrid",
 		photo: "assets/images/madrid.jpg"
 	}, 
 	{
 		question: "What is the Capital of France?", 
 		choice: ["Caracas", "Paris", "Brussels", "Nairobi" ],
-		answer: 1,
+		answer: "Paris",
 		photo: "assets/images/paris.jpg"
 	}, 
 	{
 		question: "What is the Capital of Russia?", 
 		choice: ["Moscow", "Athens", "Dublin", "Nairobi" ],
-		answer: 0,
+		answer: "Moscow",
 		photo: "assets/images/Moscow.jpg"
 	}, 
 	{
 		question: "What is the Capital of Yemen?", 
-		choice: ["Caracas", "Sana'a", "Brussels", "Bangkok" ],
-		answer: 2,
-		photo: "assets/images/bangkok.jpg"
+		choice: ["Caracas", "Sanaa", "Brussels", "Bangkok" ],
+		answer: "Sanaa",
+		photo: "assets/images/Sana'a.jpg"
 	}, 
 	{
 		question: "What is the Capital of Japan?", 
 		choice: ["Tokyo", "Kiev", "Cardiff", "Seoul" ],
-		answer: 0,
+		answer: "Tokyo",
 		photo: "assets/images/tokyo.jpg"
     }];
+    
     
 
 
@@ -74,7 +75,7 @@ var questions = [{
 
         correct:0,
         incorrect: 0,
-        counter: 20,
+        counter: 30,
         countdown: function(){
             game.counter--;
             $("#counter").html(game.counter);
@@ -85,7 +86,7 @@ var questions = [{
         },
         start: function(){ 
             timer = setInterval(game.countdown,1000);   
-             $("#subwrapper").prepend('<h2>Time Remaining: <span id="counter">120</span> Seconds</h2>');
+             $("#subwrapper").prepend('<h1>Time Remaining: <span id="counter">30</span> Seconds</h1>');
              $("#start").remove();
 			 for(var i = 0; i <questions.length; i++){
                 $("#subwrapper").append("<h2>" + questions[i].question + "</h2>");
@@ -185,8 +186,8 @@ var questions = [{
                  clearInterval(timer);
 				 $("#subwrapper h2").remove();
 				 $("#subwrapper").html("<h2> All done! </h2>");
-                 $("#subwrapper").append("<h3>Correct Answers: "+ this.correct + "</h3>");
-                 $("#subwrapper").append("<h3>Incorrect Answers: "+ this.incorrect + "</h3>");
+                 $("#subwrapper").append("<h3>Correct Answers: " + this.correct + "</h3>");
+                 $("#subwrapper").append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
                  $("#subwrapper").append("<h3>Unanswered : "+(questions.length-(this.incorrect+this.correct))+"</h3>");
              }
 
