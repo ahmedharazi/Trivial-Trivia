@@ -9,7 +9,7 @@ $(document).on('click','#end',function(){
 var questions = [{
 
         question: "What is the Capital of Italy?", 
-		choice: ["Sana'a", "Rome", "Cairo", "Madrid"],
+		choice: ["Sana'a",  "Rome", "Cairo", "Madrid"],
 		answer: "Rome",
 		photo: "assets/images/rome.jpg",
 	 },
@@ -75,7 +75,7 @@ var questions = [{
 
         correct:0,
         incorrect: 0,
-        counter: 30,
+        counter: 40,
         countdown: function(){
             game.counter--;
             $("#counter").html(game.counter);
@@ -86,18 +86,25 @@ var questions = [{
         },
         start: function(){ 
             timer = setInterval(game.countdown,1000);   
-             $("#subwrapper").prepend('<h1>Time Remaining: <span id="counter">30</span> Seconds</h1>');
+             $("#subwrapper").prepend('<h1 class="font">Time Remaining: <span id="counter">40</span> Seconds</h1>');
              $("#start").remove();
+             $("#title").remove();
 			 for(var i = 0; i <questions.length; i++){
                 $("#subwrapper").append("<h2>" + questions[i].question + "</h2>");
                 for(var j=0; j <questions[i].choice.length; j++){
-                	$("#subwrapper").append("<input type= 'radio' name='question-"+i+"' value='" + questions[i].choice[j] + "'>"+questions[i].choice[j]);
+                    // $("#subwrapper").append("<br>");
+                    $("#subwrapper").css("margin", "100px");
+                	$("#subwrapper").append("<input class='selection' type='radio' name='question-"+i+"' value='" + questions[i].choice[j]+ "'>"+questions[i].choice[j]);
+                    $(".selection").css("margin", "25px");
+                    // $("#subwrapper").css("border", "3px solid red");
+
+
 
             	}
     
     
 			 }
-			 $("#subwrapper").append('<br> <button id="end">DONE</button>');
+			 $("#subwrapper").append('<br> <br><button id="end" class="btn btn-primary">DONE</button>');
 		
         },
         done : function(){

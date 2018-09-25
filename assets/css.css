@@ -1,18 +1,32 @@
-.answerchoice {
-	border: 1px solid black;
+.font{
+  font-family: 'Merienda', cursive;
+
+}
+
+
+
+
+
+
+
+
+/* .answerchoice {
+	border: 5px solid black;
   border-radius: 5%;
 	width: 40%;
 	color: black;
   text-align: center;
-  margin: 10px auto;
+  margin: 30px auto;
   font-size: 20px;
   background-color: white;
+  line-height: 120px;
 
 }
 
 img {
   max-height: 250px;
   width: auto;
+  background-size: cover;
 }
 
 #answerblock {
@@ -31,7 +45,7 @@ img {
 
 body {
   background-color: antiquewhite;
-  background-image: url("../images/worldMap.jpeg");
+  background-image: url("../assets/images/TrivialTrivia\ .jpg");
   background-size: cover;
   font-family: 'Karla', sans-serif;
 }
@@ -49,18 +63,10 @@ h1 {
 h2,  {
   margin: 30px;
   font-weight: bold;
-}
+} */
 
-.wrapper {
-  margin: 10px auto;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 2px solid #403fd3;
-  height: 500px;
-  width: 60%;
-  text-align: center;
-}
 
-.btn {
+/* .btn {
   position: relative;
   bottom: -150px;
-}
+} */ 
